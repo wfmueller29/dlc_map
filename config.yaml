@@ -1,0 +1,190 @@
+    # Project definitions (do not edit)
+Task: motorater_inital_test
+scorer: Sam_Lee
+date: Jul26
+multianimalproject:
+
+    # Project path (change when moving around)
+project_path: /data/muellerwf/motorator_analysis_package/
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  E:\Downloads\Motorator package\Motorater_initial_test\motorater_inital_test-Sam_Lee-2019-07-26\videos\LMG6087.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\Motorater_initial_test\motorater_inital_test-Sam_Lee-2019-07-26\videos\LMG6087-3.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\LMG6087.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\LMG6087-2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\LMG6087-3.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\AR_05222019_C12_2407_T2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\AR_05222019_C12_2408_T2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\AR_05222019_C12_2409_T2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\FF9110-2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\FF9111.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\FF9111-2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\MR-20160330-SLAM53-1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\MR-20160330-SLAM53-2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\MR-20160330-SLAM54-1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m2\20170516_F_GAIT_588616_2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m2\20170516_F_GAIT_588616_3.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m2\20170516_F_GAIT_588616_1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m2\20170516_F_GAIT_576411_1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m2\20170516_F_GAIT_567995_1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m2\20170516_F_GAIT_567995_2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m1\MR-20160330-SLAM057-1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m1\MR-20160330-SLAM058-1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m1\MR-20160330-UV5139-1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m1\MR-20160330-UV5139-2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m3\MR-20170418-KK-181478-1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m3\MR-20170418-KK-181478-2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m3\MR-20170418-KK-SLAM672-1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m3\MR-20170418-KK-SLAM672-2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m3\MR-20170418-KK-SLAM674-1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m3\MR-20170418-KK-SLAM674-2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m3\MR-20170421-KK-SLAM680-1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m3\MR-20170421-KK-SLAM680-2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m3\MR-20170426-TylerForPhu_SLAM710_1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m3\MR-20170426-TylerForPhu_SLAM710_2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m4\MR-20161129-180457-1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m4\MR-20161129-180457-2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m4\MR-20161129-180464-1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m4\MR-20161129-180464-2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m4\MR-20161129-SLAM389-1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\mouse_videos\m4\MR-20161129-SLAM389-2.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C1\JK_06082018_C1_151_1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C1\KB_020918_C1_65_1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C1\KB_020918_C1_7_1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C1\KB_020918_C1_99_1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C1\MR-20160405-AA7803-1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C2\20170518_JM_238_3.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C2\CG 78 L 179227 .avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C2\CG 81 L 179075.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C2\CG 87 L 179185.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C2\JK_05152018_C2_231_1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C2\ME_082018_C2_179080_1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C2\ME_05112018_C2_273_1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C2\MR-20171215-KK-SLAM155-1..avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C2\MR-20171215-KK-SLAM182-1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C2\SH_20171211_233_1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C2\SH_20171211_284_1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Motorater_videos\train\C2\TR_050918_c2_313_1.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\Ruler Vids\RULERTEST5.avi:
+    crop: 0, 1280, 0, 1024
+  E:\Downloads\Motorator package\Ruler Vids\RULERTEST9.avi:
+    crop: 0, 1280, 0, 1024
+bodyparts:
+- left_fore
+- left_hind
+- right_fore
+- right_hind
+- nose
+- tail_base
+- tail_tip
+- top_tail_base
+- top_tail_tip
+- top_nose
+
+start: 0
+stop: 1
+numframes2pick: 5
+
+    # Plotting configuration
+skeleton:
+- - left_fore
+  - right_fore
+- - left_hind
+  - right_hind
+- - nose
+  - tail_base
+- - tail_base
+  - tail_tip
+- - top_tail_tip
+  - top_tail_base
+- - top_tail_base
+  - top_nose
+
+skeleton_color: black
+pcutoff: 0.5
+dotsize: 12
+alphavalue: 0.7
+colormap: jet
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 16
+default_net_type:
+default_augmenter:
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+croppedtraining:
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
+resnet: 50
