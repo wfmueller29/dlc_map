@@ -110,6 +110,7 @@ if grep -q "project_path: /data/$USER/motorator_analysis_package" "/data/$USER/m
 then
   echo "5. config.yaml project path is correct!!"
 else
+  echo "project path incorrect, changing to correct path now...."
   sed -i "/project_path:/s/.*/project_path: \/data\/$USER\/motorator_analysis_package\//" /data/$USER/motorator_analysis_package/config.yaml 
   if grep -q "project_path: /data/$USER/motorator_analysis_package/" "/data/$USER/motorator_analysis_package/config.yaml"
   then
