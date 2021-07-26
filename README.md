@@ -6,7 +6,7 @@
 1. copy this entire folder into `/data/$USER/` and make sure the name of the folder is `motorator_analysis_package`.
 2. type `bash /data/$USER/motorator_analysis_package/utils/initialize_env.sh` into terminal and press `[enter]`.
 3. copy videos that we want analyzed into `/data/$USER/to_analyze` folder using globus.
-4. tpye `sinteractive --gres=gpu:p100:1,lscratch:10 --mem=40g` and press `[enter]`
+4. type `sinteractive --gres=gpu:p100:1,lscratch:10 --mem=40g` and press `[enter]`
 5. type `bash /data/$USER/motorator_analysis_package/utils/do_analysis.sh` into the terminal and press `[enter]`.
 6. you will find results in `/data/$USER/to_analyze` folder
 
