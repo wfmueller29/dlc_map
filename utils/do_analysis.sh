@@ -4,12 +4,12 @@
 # Purpose: Run sam_video_analysis
 
 # set working directory
-cd /data/$USER/motorator_analysis_package/
+#cd /data/$USER/motorator_analysis_package/
 
 # establish environment for analysis
 source /data/$USER/conda/etc/profile.d/conda.sh
 conda activate base
-conda activate dlc-windowsGPU
+conda activate DEEPLABCUT
 module load cuDNN/7.0/CUDA-9.0 CUDA/9.0 R/3.5.0 python/3.5
 module load deeplabcut
 
