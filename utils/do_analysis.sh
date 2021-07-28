@@ -10,7 +10,7 @@
 source /data/$USER/conda/etc/profile.d/conda.sh
 conda activate base
 conda activate DEEPLABCUT
-module load cuDNN/7.0/CUDA-9.0 CUDA/9.0 R/3.5.0 python/3.5
+module load cuDNN/7.0/CUDA-9.0 CUDA/9.0 R/3.5.0 python/3.7
 module load deeplabcut
 
 video_path="/data/$USER/to_analyze"
