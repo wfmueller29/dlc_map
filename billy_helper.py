@@ -23,6 +23,7 @@ def copybranch(source, dest, suffix):
         os.mkdir(dest)
 
 ## get separate source path (root) from path after source (branch) and replace root with destination path
+    newpath = "None"
     for file in files:
         root = file
         branch = []
@@ -30,27 +31,30 @@ def copybranch(source, dest, suffix):
             file_split = (os.path.split(root))
             root = (file_split[0])
             branch.insert(0, file_split[1])
-            newpath = None
-            for d in branch[:-1]: #loop checks if directories in branch exist, if not, it makes the directory
-                if newpath is None:
-                    newpath = os.path.join(dest,d)
-                else:
-                    newpath = os.path.join(newpath, d)
-                if not os.path.isdir(newpath):
-                    os.mkdir(newpath)
-    shutil.copy(file, newpath)
+        newpath = "None"
+        for d in branch[:-1]: #loop checks if directories in branch exist, if not, it makes the directory
+            if newpath == "None":
+                newpath = os.path.join(dest,d)
+            else:
+                newpath = os.path.join(newpath, d)
+            if not os.path.isdir(newpath):
+                os.mkdir(newpath)
+        if os.path.exists(file):
+            shutil.copy(file, newpath)
+        else:
+            print(f"File could not be copied: {file}")
     
 #If given argument, use that as directory for mouse videos. Otherwise, look for
 #videos in current directory
 if(len(sys.argv) > 1):
-    video_folder = sys.argv[1]
+    video_folder = os.path.normpath(sys.argv[1])
 else:
     print("billy_helper could not run....Valid Video Path is needed")
     quit()
 
 #Call copy branch to move results from to_analyze to analyzed_csv  
-output_path = os.path.join(os.path.dirname(video_folder), "analyzed_csv")
-copybranch(source = video_folder, dest = output_path, suffix = "analyzed.csv")
+output_path = os.path.normpath(os.path.join(os.path.dirname(video_folder), "analyzed_csv"))
+copybranch(source = video_folder, dest = output_path, suffix = ".csv")
 
 print(f"video folder: {video_folder}")
 print(f"output path: {output_path}")
