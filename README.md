@@ -13,7 +13,7 @@ bash /data/$USER/motorator_analysis_package/utils/initialize_env.sh
 ```
 bash /data/$USER/motorator_analysis_package/utils/submit.sh
 ```
-5. you will find results in `/data/$USER/to_analyze` folder
+5. you will find results in `/data/$USER/analyzed_csv` folder
 
 
 ## Extended Protocol 
