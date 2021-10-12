@@ -27,4 +27,5 @@
 4. type `bash /data/$USER/motorator_analysis_package/utils/do_analysis.sh` into the terminal and press `[enter]`.
 5. you will find results in `/data/$USER/to_analyze` folder
 
-
+## Notes
+- Make sure that the videos have the proper codec. This is different from their file extension. For example, an .avi video could be code via one codec while another video could be coded via another codec. Make sure to be using the videos from the decoded videos folder when analyzing.
