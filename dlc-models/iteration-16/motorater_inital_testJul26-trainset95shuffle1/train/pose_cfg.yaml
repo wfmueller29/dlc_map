@@ -1,0 +1,59 @@
+all_joints:
+- - 0
+- - 1
+- - 2
+- - 3
+- - 4
+- - 5
+- - 6
+- - 7
+- - 8
+- - 9
+all_joints_names:
+- left_fore
+- left_hind
+- right_fore
+- right_hind
+- nose
+- tail_base
+- tail_tip
+- top_tail_base
+- top_tail_tip
+- top_nose
+bottomheight: 400
+crop: true
+cropratio: 0.4
+dataset: training-datasets\iteration-16\UnaugmentedDataSet_motorater_inital_testJul26\motorater_inital_test_Sam_Lee95shuffle1.mat
+display_iters: 1000
+global_scale: 0.8
+init_weights: E:\Downloads\Motorator package\Motorater_initial_test\motorater_inital_test-Sam_Lee-2019-07-26\dlc-models\iteration-15\motorater_inital_testJul26-trainset95shuffle1\train\snapshot-33500
+intermediate_supervision: false
+intermediate_supervision_layer: 12
+leftwidth: 400
+location_refinement: true
+locref_huber_loss: true
+locref_loss_weight: 0.05
+locref_stdev: 7.2801
+max_input_size: 1500
+metadataset: training-datasets\iteration-16\UnaugmentedDataSet_motorater_inital_testJul26\Documentation_data-motorater_inital_test_95shuffle1.pickle
+min_input_size: 64
+minsize: 100
+mirror: false
+multi_step:
+- - 0.005
+  - 10000
+- - 0.02
+  - 430000
+- - 0.002
+  - 730000
+- - 0.001
+  - 1030000
+net_type: resnet_50
+num_joints: 10
+pos_dist_thresh: 17
+project_path: E:\Downloads\Motorator package\Motorater_initial_test\motorater_inital_test-Sam_Lee-2019-07-26
+rightwidth: 400
+save_iters: 50000
+scale_jitter_lo: 0.5
+scale_jitter_up: 1.25
+topheight: 400
