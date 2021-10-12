@@ -202,7 +202,7 @@ print(videos)
 
 if analyze_videos:
     print("Analyzing videos")
-    deeplabcut.analyze_videos(config_path, videos, videotype = '.avi', 
+    deeplabcut.analyze_videos(config_path, videos, videotype = 'avi', 
                               save_as_csv = True)
 
 
@@ -210,7 +210,7 @@ if analyze_videos:
 data = []
 #data_ending = 'DeepCut_resnet50_motorater_inital_testJul26shuffle1_104000.csv'
 data_ending = 'MR-20160405-AA7803-1DLC_resnet50_motorater_inital_testJul26shuffle1_104000.csv'
-data = read_data_from_csv(videos, data_ending)
+#data = read_data_from_csv(videos, data_ending)
 
 mouse_data = []
 for datum in data:
