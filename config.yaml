@@ -5,7 +5,7 @@ date: Jul26
 multianimalproject:
 
     # Project path (change when moving around)
-project_path: /data/muellerwf/motorator_analysis_package/
+project_path: /gpfs/gsfs12/users/muellerwf/motorator_analysis_package
 
     # Annotation data set configuration (and individual video cropping parameters)
 video_sets:
@@ -187,4 +187,5 @@ corner2move2:
 - 50
 - 50
 move2corner: true
+identity:
 resnet: 50
