@@ -3,13 +3,16 @@
 # Author: Billy
 # Purpose: Run sam_video_analysis
 
+# source config
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+source $SCRIPT_DIR/env.config
 
 # establish environment for analysis
 source /data/$USER/conda/etc/profile.d/conda.sh
 conda activate base
-conda activate dlc-windowsGPU
-module load cuDNN/7.0/CUDA-9.0 CUDA/9.0 R/3.5.0 python/3.5
-module load deeplabcut
+conda activate $env_name
+#module load cuDNN/7.0/CUDA-9.0 CUDA/9.0 R/3.5.0 python/3.5
+#module load deeplabcut
 
 # determine where videos to analyze are located
 printf "
@@ -34,7 +37,7 @@ printf "
 Please Enter Video Path:"
 read video_path
 else
-video_path="/data/$USER/to_analyze"
+video_path=$vid_path
 fi
 printf "This is your video path: $video_path \n" 
 

@@ -9,6 +9,11 @@
 # Step 4: Create to_analyze and analyzed_csv directories in /data/$USER/
 # Step 5: Make sure config.yaml file has correct project path
 
+# source config file
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+source $SCRIPT_DIR/env.config
+
+# Start initializer
 printf "
 -----------------------------------
           5 step check
@@ -28,7 +33,7 @@ then
 	echo "1. miniconda is installed!!"
 else
 	echo "miniconda is not installed, we are installing now..." 
-	bash install_conda.sh
+	bash $SCRIPT_DIR/install_conda.sh
 	if [[ -d "/data/$USER/conda" ]]
 	then
 		echo "1. miniconda is installed!!"
@@ -42,18 +47,18 @@ fi
 source /data/$USER/conda/etc/profile.d/conda.sh
 conda activate base
 ENVS=$(conda env list | awk '{print $1}')
-if [[ $ENVS = *"dlc-windowsGPU"* ]]
+if [[ $ENVS = *$env_name* ]]
 then
-	echo "2. The environemnt dlc-windowsGPU exists!!"
+	echo "2. The environemnt $env_name exists!!"
 else
-	echo "The environment dlc-windowsGPU does not exist, installing now..."
-	bash make_dlcgpu_env.sh
+	echo "The environment $env_name does not exist, installing now..."
+	bash $SCRIPT_DIR/make_dlcgpu_env.sh
 	ENVS=$(conda env list | awk '{print $1}')
-	if [[ $ENVS = *"dlc-windowsGPU"* ]]
+	if [[ $ENVS = *$env_name* ]]
 	then
-		echo "2. The environement dlc-windowsGPU exists!!"
+		echo "2. The environement $env_name exists!!"
 	else 
-		echo "could not establish dlc-windowsGPU environment...quitting initializer"
+		echo "could not establish $env_name environment...quitting initializer"
 		exit
 	fi
 fi
@@ -88,31 +93,31 @@ fi
 
 # Step 4
 
-if [ -d "/data/$USER/to_analyze" ]
+if [ -d "$vid_path" ]
 then 
-	echo "4a. /data/$USER/to_analyze exists!"
+	echo "4a. $vid_path exists!"
 else
-	mkdir -p /data/$USER/to_analyze
-	echo "4a. /data/$USER/to_analyze has been created!!"
+	mkdir -p $vid_path
+	echo "4a. $vid_path has been created!!"
 fi
 
 
-if [ -d "/data/$USER/analyzed_csv" ]
+if [ -d "$res_path" ]
 then 
-	echo "4a. /data/$USER/analyzed_csv exists!"
+	echo "4a. $res_path exists!"
 else
-	mkdir -p /data/$USER/analyzed_csv
-	echo "4a. /data/$USER/analyzed_csv has been created!!"
+	mkdir -p $res_path 
+	echo "4a. $res_path has been created!!"
 fi
 
 # Step 5 
-if grep -q "project_path: /data/$USER/motorator_analysis_package" "/data/$USER/motorator_analysis_package/config.yaml"
+if grep -q "project_path: $pro_path" "$pro_path/config.yaml"
 then
   echo "5. config.yaml project path is correct!!"
 else
   echo "project path incorrect, changing to correct path now...."
-  sed -i "/project_path:/s/.*/project_path: \/data\/$USER\/motorator_analysis_package\//" /data/$USER/motorator_analysis_package/config.yaml 
-  if grep -q "project_path: /data/$USER/motorator_analysis_package/" "/data/$USER/motorator_analysis_package/config.yaml"
+  sed -i '/project_path:/s,.*,project_path: '"$pro_path"',' "$con_path"
+  if grep -q "project_path: $pro_path" "$con_path"
   then
     echo "5. config.yaml project path is correct!!"
   else
@@ -126,7 +131,6 @@ fi
 printf "
 -----------------------------------
 Enivronment is initialized!
-You are ready to use: \"bash utils/do_analysis.sh\"! (Without Quotes)
 -----------------------------------
 "
 
