@@ -1,6 +1,7 @@
 # dcl_map (DeepLabCut Motorator Analaysis Package)
-## Purpose: Make deeplabcut gait analysis on biowulf as streamlined and straightforward as possible. 
-### Author: Billy Mueller, Sam Lee, John Nam
+
+Purpose: Make deeplabcut gait analysis on biowulf as streamlined and straightforward as possible. 
+AuthorS: Billy Mueller, Sam Lee, John Nam
 
 ## Protocol 
 ### Step 1: Installation of dlc_map
