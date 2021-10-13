@@ -4,7 +4,7 @@
 # Purpose: Set up everything for doing motorator video analysis
 # Notes: keep in motorator_analysis_package directory
 # Step 1: Install miniconda 
-# Step 2: Set up dlc-windowsGPU 
+# Step 2: Set up dlc conda environment 
 # Step 3: Make sure motorator_analysis package is in /data/$USER/
 # Step 4: Create to_analyze and analyzed_csv directories in /data/$USER/
 # Step 5: Make sure config.yaml file has correct project path
@@ -19,7 +19,7 @@ printf "
           5 step check
 -----------------------------------
 # Step 1: Install miniconda 
-# Step 2: Set up dlc-windowsGPU 
+# Step 2: Set up $env_name 
 # Step 3: Make sure motorator_analysis package is in /data/$USER/
 # Step 4: Create to_analyze and analyzed_csv directories in /data/$USER/
 # Step 5: Make sure config.yaml file has correct project path
@@ -65,7 +65,7 @@ fi
 
 # Step 3 check if motorator_analysis_package is in correct location, 
 # if not ask if user would like to move it to proper location
-if [[ -d "/data/$USER/motorator_analysis_package" ]]
+if [[ -d "$pro_path" ]]
 then 
 	echo "3. motorator_analysis_package is in correct location!"
 else
@@ -73,13 +73,13 @@ else
 #############################################
 motorator_analysis_package is in wrong location :(
 #############################################
-Correct path: /data/$USER/motorator_analysis_package
+Correct path: $pro_path
 
 Current path(s): 
 
 	"
-	mpath1=$(find /data/$USER/ -name "*motorator_analysis_package*")
-	mpath2=$(find /home/$USER/ -name "*motorator_analysis_package*")
+	mpath1=$(find /data/$USER/ -name "*$pack_name*")
+	mpath2=$(find /home/$USER/ -name "*$pack_name*")
 	echo $mpath1 
 	echo $mpath2
 	printf "

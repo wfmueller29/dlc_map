@@ -19,7 +19,7 @@ printf "
 \n##############################\n
 	USER INPUT NEEDED
 \n##############################\n
-Are videos stored in \"/data/$USER/to_analyze\"?
+Are videos stored in \"$vid_path\"?
 (Y/N):"
 read y_n
 y_n=${y_n,,}
