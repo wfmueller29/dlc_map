@@ -12,4 +12,4 @@ conda update conda
 conda clean --all --yes
 
 # create new environment
-conda env create -f dlc-windowsGPU.yaml
+conda env create -f works.yaml

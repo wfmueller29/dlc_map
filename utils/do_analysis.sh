@@ -4,7 +4,7 @@
 # Purpose: Run sam_video_analysis
 
 # set working directory
-#cd /data/$USER/motorator_analysis_package/
+cd /data/$USER/motorator_analysis_package/
 
 # establish environment for analysis
 source /data/$USER/conda/etc/profile.d/conda.sh
