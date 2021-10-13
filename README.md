@@ -3,17 +3,25 @@
 ### Author: Billy Mueller, Sam Lee, John Nam
 
 ## Brief Protocol 
-1. copy this entire folder into `/data/$USER/` and make sure the name of the folder is `dlc_map`.
-2. copy and paste this command into biowulf terminal and press enter
+### Step 1: Installation of dlc_map
+1. login to Biowulf
+2. Copy and paste these commands into terminal
+```
+cd /data/$USER
+```
+```
+git clone https://github.com/wfmueller29/dlc_map.git
+```
 ```
 bash /data/$USER/dlc_map/utils/initialize_env.sh
 ```
-3. copy videos that we want analyzed into `/data/$USER/to_analyze` folder using globus.
-4. copy and paste this command into biowulf terminal and press enter
+### Step 2: Analysis
+1. transfer decoded videos that we want analyzed into `/data/$USER/to_analyze` folder using globus.
+2. copy and paste this command into biowulf terminal and press enter
 ```
 bash /data/$USER/dlc_map/utils/submit.sh
 ```
-5. you will find results in `/data/$USER/analyzed_csv` folder
+3. you will find results in `/data/$USER/analyzed_csv` folder
 
 
 ## Extended Protocol 
