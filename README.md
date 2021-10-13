@@ -3,33 +3,33 @@
 ### Author: Billy Mueller, Sam Lee, John Nam
 
 ## Brief Protocol 
-1. copy this entire folder into `/data/$USER/` and make sure the name of the folder is `motorator_analysis_package`.
+1. copy this entire folder into `/data/$USER/` and make sure the name of the folder is `dlc_map`.
 2. copy and paste this command into biowulf terminal and press enter
 ```
-bash /data/$USER/motorator_analysis_package/utils/initialize_env.sh
+bash /data/$USER/dlc_map/utils/initialize_env.sh
 ```
 3. copy videos that we want analyzed into `/data/$USER/to_analyze` folder using globus.
 4. copy and paste this command into biowulf terminal and press enter
 ```
-bash /data/$USER/motorator_analysis_package/utils/submit.sh
+bash /data/$USER/dlc_map/utils/submit.sh
 ```
 5. you will find results in `/data/$USER/analyzed_csv` folder
 
 
 ## Extended Protocol 
-1. copy this entire folder into `/data/$USER/` and make sure the name of the folder is `motorator_analysis_package`.
+1. copy this entire folder into `/data/$USER/` and make sure the name of the folder is `dlc_map`.
     1. This is crucial as all of the directories in the shell scripts work under this assumption. 
     2. `$USER` a variable in linux that will change from user to user 
-2. type `bash /data/$USER/motorator_analysis_package/utils/initialize_env.sh` into terminal and press `[enter]`.
+2. type `bash /data/$USER/dlc_map/utils/initialize_env.sh` into terminal and press `[enter]`.
     1. This is going to initialize the environment doing 5 steps
         1. install miniconda to `/data/$USER/`
         2. use conda to create an environment dlc-windowsGPU from `dlc_windowsGPU.yaml`
-        3. check that the motorator_analysis_package is in correct location. So full path is: `/data/$USER/motorator_analysis_package`
+        3. check that the dlc_map is in correct location. So full path is: `/data/$USER/dlc_map`
         4. create folders `/data/$USER/to_analyze` and `/data/$USER/analyzed_csv`
         5. make sure that the project_path in config.yaml file is correct
 3. copy videos that we want analyzed into `/data/$USER/to_analyze` folder using globus.
      1.  Globus is a file transfer software that 
-4. type `bash /data/$USER/motorator_analysis_package/utils/do_analysis.sh` into the terminal and press `[enter]`.
+4. type `bash /data/$USER/dlc_map/utils/do_analysis.sh` into the terminal and press `[enter]`.
 5. you will find results in `/data/$USER/to_analyze` folder
 
 ## Notes
