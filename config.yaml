@@ -3,9 +3,10 @@ Task: motorater_inital_test
 scorer: Sam_Lee
 date: Jul26
 multianimalproject:
+identity:
 
     # Project path (change when moving around)
-project_path: /data/muellerwf/dlc_map
+project_path: /gpfs/gsfs12/users/muellerwf/dlc_map
 
     # Annotation data set configuration (and individual video cropping parameters)
 video_sets:
@@ -175,7 +176,6 @@ batch_size: 8
 
     # Cropping Parameters (for analysis and outlier frame detection)
 cropping: false
-croppedtraining:
     #if cropping is true for analysis, then set the values here:
 x1: 0
 x2: 640
@@ -187,5 +187,5 @@ corner2move2:
 - 50
 - 50
 move2corner: true
-identity:
+croppedtraining:
 resnet: 50

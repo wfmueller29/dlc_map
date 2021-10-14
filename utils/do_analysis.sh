@@ -3,8 +3,7 @@
 # Author: Billy
 # Purpose: Run sam_video_analysis
 
-#source config file
-SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+#Source config file 
 source $SCRIPT_DIR/env.config
 
 # establish environment for analysis
