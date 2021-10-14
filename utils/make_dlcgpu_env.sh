@@ -15,4 +15,4 @@ conda update conda
 conda clean --all --yes
 
 # create new environment
-conda env create -f $SCRIPT_DIR/$env_file
+conda env create -f $env_file

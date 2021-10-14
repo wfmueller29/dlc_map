@@ -1,4 +1,4 @@
-name: DEEPLABCUT
+name: dlc_gpu_env
 channels:
   - conda-forge
   - defaults

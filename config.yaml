@@ -5,7 +5,7 @@ date: Jul26
 multianimalproject:
 
     # Project path (change when moving around)
-project_path: /gpfs/gsfs12/users/muellerwf/motorator_analysis_package
+project_path: /data/muellerwf/dlc_map
 
     # Annotation data set configuration (and individual video cropping parameters)
 video_sets:
