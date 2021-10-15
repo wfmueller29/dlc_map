@@ -17,5 +17,5 @@ video_path=$vid_path
 printf "This is your video path: $video_path \n" 
 
 ## call sam_video_analysis.py and billy helper.py
-python sam_video_analysis.py $video_path  
-python billy_helper.py $video_path
+python $pro_path/sam_video_analysis.py $video_path  
+python $pro_path/billy_helper.py $video_path
