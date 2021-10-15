@@ -4,7 +4,10 @@
 Authors: Billy Mueller, Sam Lee, John Nam 
 
 ## Table of Contents
-[Purpose](#purpose)
+[Purpose](#purpose) \
+[Prerequisites](#prerequisites) \ 
+[Brief Protocol](#brief-protocol) \
+[Extended Protocol](#extended-protocol) 
 
 ## Purpose 
 dlc_map was created to make the motorator gait analysis pipeline as accessible and streamline as possible. The hope was that someone with no expereince using supercomputers, linux, conda, python, and bash would be able to use this package by following the protocols listed and successfully analyze motorator videos. However, in order to troubleshoot issues with this package, knowledge of these tools is essential. I have included a table outlining the softwares that you will need to be familiar with in order to use this package and troubleshoot the package. This README is has a Brief Protocol and an Extended Protocol.
@@ -20,7 +23,7 @@ dlc_map was created to make the motorator gait analysis pipeline as accessible a
 | DeepLabCut | | X | This is the python package that is used to analyze the videos. | [DeepLabCut docs](https://github.com/DeepLabCut/DeepLabCut)
 | Bash | | X | This is the shell scripting language used to streamline the analysis process. | [Bash docs](https://www.gnu.org/software/bash/manual/bash.html) |
 
-## Protocol 
+## Brief Protocol 
 ### Step 1: Installation of dlc_map
 1. login to Biowulf
 2. Copy and paste these commands into terminal (in order!)
