@@ -1,11 +1,15 @@
 # dcl_map (DeepLabCut Motorator Analaysis Package)
 
 
-Authors: Billy Mueller, Sam Lee, John Nam \
-\
-Purpose: dlc_map was created to make the motorator gait analysis pipeline as accessible and streamline as possible. The hope was that someone with no expereince using supercomputers, linux, conda, python, and bash would be able to use this package by following the protocols listed and successfully analyze motorator videos. However, in order to troubleshoot issues with this package, knowledge of these tools is essential. I have included a table outlining the softwares that you will need to be familiar with in order to use this package and troubleshoot the package. This README is has a Brief Protocol and an Extended Protocol. \
-\
-Prerequisites: 
+Authors: Billy Mueller, Sam Lee, John Nam 
+
+## Table of Contents
+[Purpose](#purpose)
+
+## Purpose 
+dlc_map was created to make the motorator gait analysis pipeline as accessible and streamline as possible. The hope was that someone with no expereince using supercomputers, linux, conda, python, and bash would be able to use this package by following the protocols listed and successfully analyze motorator videos. However, in order to troubleshoot issues with this package, knowledge of these tools is essential. I have included a table outlining the softwares that you will need to be familiar with in order to use this package and troubleshoot the package. This README is has a Brief Protocol and an Extended Protocol.
+
+## Prerequisites 
 | Software | To Use | To Troubleshoot | Description | Documentation |
 |---|---|---|---|---|
 | Biowulf | X | X | NIH's supercomputer. Allows us to analyze the videos remotely and using a GPU, which does the analysis much faster | [Biowulf](https://hpc.nih.gov/systems/) |
