@@ -5,12 +5,15 @@ Authors: Billy Mueller, Sam Lee, John Nam
 
 ## Table of Contents
 [Purpose](#purpose) \
-[Prerequisites](#prerequisites) \ 
+[Prerequisites](#prerequisites) \
 [Brief Protocol](#brief-protocol) \
-[Extended Protocol](#extended-protocol) 
+[Extended Protocol](#extended-protocol) \
+[Notes and Troubleshooting](#notes-and-troubleshooting)
 
 ## Purpose 
-dlc_map was created to make the motorator gait analysis pipeline as accessible and streamline as possible. The hope was that someone with no expereince using supercomputers, linux, conda, python, and bash would be able to use this package by following the protocols listed and successfully analyze motorator videos. However, in order to troubleshoot issues with this package, knowledge of these tools is essential. I have included a table outlining the softwares that you will need to be familiar with in order to use this package and troubleshoot the package. This README is has a Brief Protocol and an Extended Protocol.
+dlc_map was created to make the motorator gait analysis pipeline as accessible and streamline as possible. The hope was that someone with no expereince using supercomputers, linux, conda, python, and bash would be able to use this package by following the protocols listed and successfully analyze motorator videos. However, in order to troubleshoot issues with this package, knowledge of these tools is essential. I have included a table outlining the softwares that you will need to be familiar with in order to (1) use this package and (2) troubleshoot the package. \
+\
+In addition, this README has a Brief Protocol and an Extended Protocol. You can use the [Brief Protocol](#brief-protocol) if you have a biowulf account and are familiar with using globus. However, if you are not familiar with biowulf or globus, or would like to learn more about the analysis, use the [Extended Protocol](#extended-protocol).
 
 ## Prerequisites 
 | Software | To Use | To Troubleshoot | Description | Documentation |
@@ -46,10 +49,6 @@ bash /data/$USER/dlc_map/utils/submit.sh
 ```
 3. you will find results in `/data/$USER/analyzed_csv` folder
 
-
-## Notes/Troubleshooting
-- Make sure that the videos have the proper codec. This is different from their file extension. For example, an .avi video could be code via one codec while another video could be coded via another codec. Make sure to be using the videos from the decoded videos folder when analyzing.
-
 ## Extended Protocol
 ### Step 1: Biowulf Setup and Installation of dlc_map
 1. Create Biowulf Account (if you do not already have one). If you do not have a Biowulf Account, heres is the link to the docs: [Biowulf Get An Account](https://hpc.nih.gov/docs/accounts.html)
@@ -64,9 +63,13 @@ git clone https://github.com/wfmueller29/dlc_map.git
 Now dlc_map should be downloaded into the `/data/$USER` folder. Here `$USER` is a linux environment variable that gives the name of the user. So if your username is johnsmith, dlc_map should be in `/data/johnsmith/`
 * Note once we have created a biowulf account and installed dlc_map, we will not have to do these steps again. 
 * However, we will have to login into Biowulf everytime we want to do analyze videos.
-### Step2: Initialize Analysis Environemnt
+### Step 2: Initialize Analysis Environemnt
 1. Copy and paste this command into terminal
 ```
 bash /data/$USER/dlc_map/utils/initialize_env.sh
 ```
+### Step 3: Do analysis
+
+## Notes and Troubleshooting
+- Make sure that the videos have the proper codec. This is different from their file extension. For example, an .avi video could be code via one codec while another video could be coded via another codec. Make sure to be using the videos from the decoded videos folder when analyzing.
 
