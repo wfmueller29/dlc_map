@@ -6,17 +6,19 @@ Authors: Billy Mueller, Sam Lee, John Nam
 ## Protocol 
 ### Step 1: Installation of dlc_map
 1. login to Biowulf
-2. Copy and paste these commands into terminal
+2. Copy and paste these commands into terminal (in order!)
 ```
 cd /data/$USER
 ```
 ```
 git clone https://github.com/wfmueller29/dlc_map.git
 ```
+### Step 2: Initialize Environment
+1. Copy and paste this command into terminal
 ```
 bash /data/$USER/dlc_map/utils/initialize_env.sh
 ```
-### Step 2: Analysis
+### Step 3: Analysis
 1. transfer decoded videos that we want analyzed into `/data/$USER/to_analyze` folder using globus.
 2. copy and paste this command into biowulf terminal and press enter
 ```
