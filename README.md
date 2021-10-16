@@ -11,7 +11,7 @@ Authors: Billy Mueller, Sam Lee, John Nam
 [Notes and Troubleshooting](#notes-and-troubleshooting)
 
 ## Purpose 
-dlc_map was created to make the motorator gait analysis pipeline as accessible and streamline as possible. The hope was that someone with no expereince using supercomputers, linux, conda, python, and bash would be able to use this package by following the protocols listed and successfully analyze motorator videos. However, in order to troubleshoot issues with this package, knowledge of these tools is essential. I have included a table outlining the softwares that you will need to be familiar with in order to (1) use this package and (2) troubleshoot the package. \
+dlc_map was created to make the motorator gait analysis pipeline as accessible and streamlined as possible. The hope was that someone with no expereince using supercomputers, linux, conda, python, and bash would be able to use this package by following the protocols listed and successfully analyze motorator videos. However, in order to troubleshoot issues with this package, knowledge of these tools is essential. I have included a table outlining the softwares that you will need to be familiar with in order to (1) use this package and (2) troubleshoot the package. \
 \
 In addition, this README has a Brief Protocol and an Extended Protocol. You can use the [Brief Protocol](#brief-protocol) if you have a biowulf account and are familiar with using globus. However, if you are not familiar with biowulf or globus, or would like to learn more about the analysis, use the [Extended Protocol](#extended-protocol).
 
@@ -68,7 +68,34 @@ Now dlc_map should be downloaded into the `/data/$USER` folder. Here `$USER` is 
 ```
 bash /data/$USER/dlc_map/utils/initialize_env.sh
 ```
-### Step 3: Do analysis
+This command will accomplish the following:  
+1. Check if miniconda is installed, and if it is not, it will instlal it.
+2. Set up the conda environment needed to run DeepLabCut.
+3. Make sure that dlc_map is in the /data/$USER directory
+4. Create to_analyze and analyzed_csv directories
+5. Make sure the config.yaml file has correct path.
+
+### Step 3: Transfer Videos via Globus
+1. See [Globus Docs](https://docs.globus.org/how-to/) on how to configure and use globus.
+2. Be sure to transfer __decoded__ videos to the `/data/$USER/to_analyze` directory. The decoded videos can be found here: `M:\Gait_Analysis\decoded_MOTORATER`
+
+### Step 4: Do Analysis
+1. Copy and paste this commnad into terminal
+```
+bash /data/$USER/dlc_map/utils/submit.sh
+```
+the `submit.sh` script will call the `do_analysis.sh` script as an sbatch command (ie. a job to submitted to biowulf). This `do_analysis.sh` script will do the following:
+1. source conda
+2. activate the deeplabcut conda environment
+3. call `sam_video_analysis.py`
+4. call `billy_helper.py`
+Biowulf will send you an email when the job has been completed. Following this email proceed to step 5
+
+### Step 5: Repeat Steps 3 and 4
+1. You can find the results of the Step 4 analysis in the `/data/$USER/analyzed_csv` directory
+2. Now that all the videos in `/data/$USER/to_analyze` have been processed, we need to delete the videos in this directory to make space for more videos.
+3. We can now repeat Steps 3 and 4.
+
 
 ## Notes and Troubleshooting
 - Make sure that the videos have the proper codec. This is different from their file extension. For example, an .avi video could be code via one codec while another video could be coded via another codec. Make sure to be using the videos from the decoded videos folder when analyzing.
