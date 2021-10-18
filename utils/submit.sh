@@ -17,4 +17,4 @@ echo "Error path: $ERR"
 echo "Export script direcotory: $SCRIPT_DIR"
 
 #submit batch
-sbatch -p gpu --mem=10G --gres=gpu:p100:1 -t 16:00:00 --mail-type=END -o $OUTPUT -e $ERR --export=SCRIPT_DIR=$SCRIPT_DIR $pro_path/utils/do_analysis.sh
+sbatch -p gpu --mem=10G --gres=gpu:p100:1 -t 24:00:00 --mail-type=END -o $OUTPUT -e $ERR --export=SCRIPT_DIR=$SCRIPT_DIR $pro_path/utils/do_analysis.sh
