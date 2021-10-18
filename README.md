@@ -73,7 +73,7 @@ Biowulf will send you an email when the job has been completed. Following this e
 
 Notes:
 * Once the job is submitted to biowulf, we are free to logout of biowulf and turn off our computer. 
-* I would recommmend analyzing 3 TB at one time and transferrign the other 3 TB via globus. 
+* I would recommmend analyzing 3 TB at one time because of the Wall time limit. The max wall time is 24 hours, and it takes roughloy 14 hours to do 3 TB. 
 
 ### Step 5: Transfer Results
 1. You can find the results of the Step 4 analysis in the `/data/$USER/analyzed_csv` directory
