@@ -1,2 +1,3 @@
 # ignore log directory
-log/
+log/*
+!log/.gitkeep
