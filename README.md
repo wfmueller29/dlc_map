@@ -77,7 +77,10 @@ This command will accomplish the following:
 
 ### Step 3: Transfer Videos via Globus
 1. See [Globus Docs](https://docs.globus.org/how-to/) on how to configure and use globus.
-2. Be sure to transfer __decoded__ videos to the `/data/$USER/to_analyze` directory. The decoded videos can be found here: `M:\Gait_Analysis\decoded_MOTORATER`
+2. Be sure to transfer __decoded__ videos to the `/data/$USER/to_analyze` directory. The decoded videos can be found here: `M:\Gait_Analysis\decoded_MOTORATER`.
+Notes:
+* When a globus transfer is in progress, we need to be connected to the Network and your computer must be on. However, we can remove our PIV card.
+
 
 ### Step 4: Do Analysis
 1. Copy and paste this commnad into terminal
@@ -90,6 +93,10 @@ the `submit.sh` script will call the `do_analysis.sh` script as an sbatch comman
 3. call `sam_video_analysis.py`
 4. call `billy_helper.py`
 Biowulf will send you an email when the job has been completed. Following this email proceed to step 5
+
+Notes:
+* Once the job is submitted to biowulf, we are free to logout of biowulf and turn off our computer. 
+* I would recommmend analyzing 3 TB at one time and transferrign the other 3 TB via globus. 
 
 ### Step 5: Repeat Steps 3 and 4
 1. You can find the results of the Step 4 analysis in the `/data/$USER/analyzed_csv` directory
