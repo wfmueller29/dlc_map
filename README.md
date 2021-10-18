@@ -6,8 +6,7 @@ Authors: Billy Mueller, Sam Lee, John Nam
 ## Table of Contents
 [Purpose](#purpose) \
 [Prerequisites](#prerequisites) \
-[Brief Protocol](#brief-protocol) \
-[Extended Protocol](#extended-protocol) \
+[Protocol](#protocol) \
 [Notes and Troubleshooting](#notes-and-troubleshooting)
 
 ## Purpose 
@@ -26,30 +25,7 @@ In addition, this README has a Brief Protocol and an Extended Protocol. You can 
 | DeepLabCut | | X | This is the python package that is used to analyze the videos. | [DeepLabCut docs](https://github.com/DeepLabCut/DeepLabCut)
 | Bash | | X | This is the shell scripting language used to streamline the analysis process. | [Bash docs](https://www.gnu.org/software/bash/manual/bash.html) |
 
-## Brief Protocol 
-### Step 1: Installation of dlc_map
-1. login to Biowulf
-2. Copy and paste these commands into terminal (in order!)
-```
-cd /data/$USER
-```
-```
-git clone https://github.com/wfmueller29/dlc_map.git
-```
-### Step 2: Initialize Environment
-1. Copy and paste this command into terminal
-```
-bash /data/$USER/dlc_map/utils/initialize_env.sh
-```
-### Step 3: Analysis
-1. transfer decoded videos that we want analyzed into `/data/$USER/to_analyze` folder using globus.
-2. copy and paste this command into biowulf terminal and press enter
-```
-bash /data/$USER/dlc_map/utils/submit.sh
-```
-3. you will find results in `/data/$USER/analyzed_csv` folder
-
-## Extended Protocol
+## Protocol
 ### Step 1: Biowulf Setup and Installation of dlc_map
 1. Create Biowulf Account (if you do not already have one). If you do not have a Biowulf Account, heres is the link to the docs: [Biowulf Get An Account](https://hpc.nih.gov/docs/accounts.html)
 2. Login to Biowulf. Docs: [Connecting to Biowulf](https://hpc.nih.gov/docs/connect.html)
@@ -77,7 +53,8 @@ This command will accomplish the following:
 
 ### Step 3: Transfer Videos via Globus
 1. See [Globus Docs](https://docs.globus.org/how-to/) on how to configure and use globus.
-2. Be sure to transfer __decoded__ videos to the `/data/$USER/to_analyze` directory. The decoded videos can be found here: `M:\Gait_Analysis\decoded_MOTORATER`.
+2. Be sure to transfer __decoded__ videos to the `/data/$USER/to_analyze` directory. The decoded videos can be found here: `M:\Gait_Analysis\decoded_MOTORATER`. 
+
 Notes:
 * When a globus transfer is in progress, we need to be connected to the Network and your computer must be on. However, we can remove our PIV card.
 
@@ -92,16 +69,19 @@ the `submit.sh` script will call the `do_analysis.sh` script as an sbatch comman
 2. activate the deeplabcut conda environment
 3. call `sam_video_analysis.py`
 4. call `billy_helper.py`
-Biowulf will send you an email when the job has been completed. Following this email proceed to step 5
+Biowulf will send you an email when the job has been completed. Following this email proceed to step 5.
 
 Notes:
 * Once the job is submitted to biowulf, we are free to logout of biowulf and turn off our computer. 
-* I would recommmend analyzing 3 TB at one time and transferrign the other 3 TB via globus. 
+* I would recommmend analyzing 3 TB at one time because of the Wall time limit. The max wall time is 24 hours, and it takes roughloy 14 hours to do 3 TB. 
 
-### Step 5: Repeat Steps 3 and 4
+### Step 5: Transfer Results
 1. You can find the results of the Step 4 analysis in the `/data/$USER/analyzed_csv` directory
-2. Now that all the videos in `/data/$USER/to_analyze` have been processed, we need to delete the videos in this directory to make space for more videos.
-3. We can now repeat Steps 3 and 4.
+2. Please Transfer the entire directory structure from `/data/$USER/analyzed_csv` to `M:\Gait_Analysis\analyzed_csv`
+
+### Step 6: Repeat Steps 3-5
+1. Now that all the videos in `/data/$USER/to_analyze` have been processed, we need to delete the videos in this directory to make space for more videos.
+2. We can now repeat Steps 3-5.
 
 
 ## Notes and Troubleshooting
