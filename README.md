@@ -10,9 +10,7 @@ Authors: Billy Mueller, Sam Lee, John Nam
 [Notes and Troubleshooting](#notes-and-troubleshooting)
 
 ## Purpose 
-dlc_map was created to make the motorator gait analysis pipeline as accessible and streamlined as possible. The hope was that someone with no expereince using supercomputers, linux, conda, python, and bash would be able to use this package by following the protocols listed and successfully analyze motorator videos. However, in order to troubleshoot issues with this package, knowledge of these tools is essential. I have included a table outlining the softwares that you will need to be familiar with in order to (1) use this package and (2) troubleshoot the package. \
-\
-In addition, this README has a Brief Protocol and an Extended Protocol. You can use the [Brief Protocol](#brief-protocol) if you have a biowulf account and are familiar with using globus. However, if you are not familiar with biowulf or globus, or would like to learn more about the analysis, use the [Extended Protocol](#extended-protocol).
+dlc_map was created to make the motorator gait analysis pipeline as accessible and streamlined as possible. The hope was that someone with no expereince using supercomputers, linux, conda, python, and bash would be able to use this package by following the protocols listed and successfully analyze motorator videos. However, in order to troubleshoot issues with this package, knowledge of these tools is essential. I have included a table outlining the softwares that you will need to be familiar with in order to (1) use this package and (2) troubleshoot the package. 
 
 ## Prerequisites 
 | Software | To Use | To Troubleshoot | Description | Documentation |
