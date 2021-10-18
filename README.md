@@ -68,16 +68,19 @@ the `submit.sh` script will call the `do_analysis.sh` script as an sbatch comman
 2. activate the deeplabcut conda environment
 3. call `sam_video_analysis.py`
 4. call `billy_helper.py`
-Biowulf will send you an email when the job has been completed. Following this email proceed to step 5
+Biowulf will send you an email when the job has been completed. Following this email proceed to step 5.
 
 Notes:
 * Once the job is submitted to biowulf, we are free to logout of biowulf and turn off our computer. 
 * I would recommmend analyzing 3 TB at one time and transferrign the other 3 TB via globus. 
 
-### Step 5: Repeat Steps 3 and 4
+### Step 5: Transfer Results
 1. You can find the results of the Step 4 analysis in the `/data/$USER/analyzed_csv` directory
-2. Now that all the videos in `/data/$USER/to_analyze` have been processed, we need to delete the videos in this directory to make space for more videos.
-3. We can now repeat Steps 3 and 4.
+2. Please Transfer the entire directory structure from `/data/$USER/analyzed_csv` to `M:\Gait_Analysis\analyzed_csv`
+
+### Step 6: Repeat Steps 3-5
+1. Now that all the videos in `/data/$USER/to_analyze` have been processed, we need to delete the videos in this directory to make space for more videos.
+2. We can now repeat Steps 3-5.
 
 
 ## Notes and Troubleshooting
