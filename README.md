@@ -6,8 +6,7 @@ Authors: Billy Mueller, Sam Lee, John Nam
 ## Table of Contents
 [Purpose](#purpose) \
 [Prerequisites](#prerequisites) \
-[Brief Protocol](#brief-protocol) \
-[Extended Protocol](#extended-protocol) \
+[Protocol](#protocol) \
 [Notes and Troubleshooting](#notes-and-troubleshooting)
 
 ## Purpose 
@@ -26,30 +25,7 @@ In addition, this README has a Brief Protocol and an Extended Protocol. You can 
 | DeepLabCut | | X | This is the python package that is used to analyze the videos. | [DeepLabCut docs](https://github.com/DeepLabCut/DeepLabCut)
 | Bash | | X | This is the shell scripting language used to streamline the analysis process. | [Bash docs](https://www.gnu.org/software/bash/manual/bash.html) |
 
-## Brief Protocol 
-### Step 1: Installation of dlc_map
-1. login to Biowulf
-2. Copy and paste these commands into terminal (in order!)
-```
-cd /data/$USER
-```
-```
-git clone https://github.com/wfmueller29/dlc_map.git
-```
-### Step 2: Initialize Environment
-1. Copy and paste this command into terminal
-```
-bash /data/$USER/dlc_map/utils/initialize_env.sh
-```
-### Step 3: Analysis
-1. transfer decoded videos that we want analyzed into `/data/$USER/to_analyze` folder using globus.
-2. copy and paste this command into biowulf terminal and press enter
-```
-bash /data/$USER/dlc_map/utils/submit.sh
-```
-3. you will find results in `/data/$USER/analyzed_csv` folder
-
-## Extended Protocol
+## Protocol
 ### Step 1: Biowulf Setup and Installation of dlc_map
 1. Create Biowulf Account (if you do not already have one). If you do not have a Biowulf Account, heres is the link to the docs: [Biowulf Get An Account](https://hpc.nih.gov/docs/accounts.html)
 2. Login to Biowulf. Docs: [Connecting to Biowulf](https://hpc.nih.gov/docs/connect.html)
