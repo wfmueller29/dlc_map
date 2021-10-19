@@ -51,7 +51,7 @@ This command will accomplish the following:
 
 ### Step 3: Transfer Videos via Globus
 1. See [Globus Docs](https://docs.globus.org/how-to/) on how to configure and use globus.
-2. Be sure to transfer __decoded__ videos to the `/data/$USER/to_analyze` directory. The decoded videos can be found here: `M:\Gait_Analysis\decoded_MOTORATER`. 
+2. Be sure to transfer __decoded__ videos to the `/data/$USER/to_analyze` directory. The decoded videos can be found here: `M:\Gait_Analysis\decoded_MOTORATER`. Please maitain the directory structure as found in `M:\Gait_Analysis\decoded_MOTORATER` when copying the videos. This way the results will have the same directory structure as the videos. 
 
 Notes:
 * When a globus transfer is in progress, we need to be connected to the Network and your computer must be on. However, we can remove our PIV card.
