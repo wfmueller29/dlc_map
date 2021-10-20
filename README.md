@@ -77,10 +77,21 @@ Notes:
 1. You can find the results of the Step 4 analysis in the `/data/$USER/analyzed_csv` directory
 2. Please Transfer the entire directory structure from `/data/$USER/analyzed_csv` to `M:\Gait_Analysis\analyzed_csv`
 
-### Step 6: Repeat Steps 3-5
-1. Now that all the videos in `/data/$USER/to_analyze` have been processed, we need to delete the videos in this directory to make space for more videos.
-2. We can now repeat Steps 3-5.
+### Step 6: Delete Analyzed Videos
+1. Now that all the videos in `/data/$USER/to_analyze` have been processed, we need to delete the videos in this directory to make space for more videos. This can be accomplished with this command:
+```
+rm -R /data/$USER/to_analyze/*
+```
+### Bonus Step 7: Move from on_deck to to_analyze
+1. I like to use an `on_deck` directory where I upload videos via globus as the videos in the `to_analyze` directory are being processed. After we delete the videos in `to_analyze`, we can move the videos in the `on_deck` directory to the `to_analyze` directory using this command:
+```
+mv /data/$USER/on_deck/* /data/muellerwf/to_analyze/
+```
+* This `on_deck` direcotry allows us to upload vidoes while we are processing the videos in Biowulf. 
+* Note: That if you are using this step when we upload videos via Globus, we will upload to the `on_deck` directory instead of the `to_analyze` directory. 
 
+### Step 8: Repeat Steps 3-6.
+1. Now we can repeate steps 3-6 or 3-7.
 
 ## Notes and Troubleshooting
 - Make sure that the videos have the proper codec. This is different from their file extension. For example, an .avi video could be code via one codec while another video could be coded via another codec. Make sure to be using the videos from the decoded videos folder when analyzing.
