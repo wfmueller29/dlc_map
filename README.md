@@ -80,7 +80,7 @@ Notes:
 ### Step 6: Delete Analyzed Videos
 1. Now that all the videos in `/data/$USER/to_analyze` have been processed, we need to delete the videos in this directory to make space for more videos. This can be accomplished with this command:
 ```
-rm -R /data/$USER/to_analyze/*
+bash /data/$USER/dlc_map/utils/remove.sh
 ```
 ### Bonus Step 7: Move from on_deck to to_analyze
 1. I like to use an `on_deck` directory where I upload videos via globus as the videos in the `to_analyze` directory are being processed. After we delete the videos in `to_analyze`, we can move the videos in the `on_deck` directory to the `to_analyze` directory using this command:
