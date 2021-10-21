@@ -85,7 +85,7 @@ bash /data/$USER/dlc_map/utils/remove.sh
 ### Bonus Step 7: Move from on_deck to to_analyze
 1. I like to use an `on_deck` directory where I upload videos via globus as the videos in the `to_analyze` directory are being processed. After we delete the videos in `to_analyze`, we can move the videos in the `on_deck` directory to the `to_analyze` directory using this command:
 ```
-mv /data/$USER/on_deck/* /data/$USER/to_analyze/
+mv -v /data/$USER/on_deck/* /data/$USER/to_analyze/
 ```
 * This `on_deck` direcotry allows us to upload vidoes while we are processing the videos in Biowulf. 
 * Note: That if you are using this step when we upload videos via Globus, we will upload to the `on_deck` directory instead of the `to_analyze` directory. 
